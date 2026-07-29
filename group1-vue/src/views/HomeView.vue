@@ -38,7 +38,7 @@
 
       <!-- ③ メイン機能ボタン（3列） -->
       <div class="action-buttons">
-        <button class="btn main-btn">チャット</button>
+        <button class="btn main-btn" @click="goToChat">チャット</button>
         <button class="btn main-btn">マッチング</button>
         <button class="btn main-btn">グループ作成</button>
       </div>
@@ -52,7 +52,13 @@
 </template>
 
 <script setup>
-// 今後、予定や課題のデータを動的（配列）にする処理をここに書いていきます！
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const goToChat = () => {
+  router.push('/chat');
+};
 </script>
 
 <style scoped>
