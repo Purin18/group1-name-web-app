@@ -4,7 +4,14 @@ import { ref, nextTick } from 'vue';
 // --- 画面切り替え用の状態 ---
 // nullのときは選択画面、データが入るとチャット画面になります
 const selectedMember = ref(null);
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
+
+// ホーム画面に戻る処理
+const goHome = () => {
+  router.push('/'); // ホームのパス（'/'）へ移動
+};
 // メンバー一覧データ
 const members = [
   { id: 1, name: '「武庫川」さん' }, // 一番上（移行可能）
@@ -79,6 +86,7 @@ const scrollToBottom = async () => {
   <!-- 【画面1】メンバー選択画面（selectedMember が null の時に表示） -->
   <div v-if="!selectedMember" class="chat-container">
     <header class="chat-header">
+      <button class="back-btn" @click="goHome">← 戻る</button>
       <h2>メンバー選択</h2>
     </header>
 
