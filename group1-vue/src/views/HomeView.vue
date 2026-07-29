@@ -4,8 +4,6 @@
     <header class="header">
       <div class="header-logo">
         <h1 class="title">Campus Life</h1>
-        <!-- キャラクター画像（必要に応じて assets に画像を入れて呼び出します） -->
-        <div class="character-placeholder">🐰</div>
       </div>
     </header>
 

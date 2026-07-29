@@ -6,8 +6,6 @@
     <header class="header">
       <div class="header-logo">
         <h1 class="title">Campus Life</h1>
-        <!-- 必要に応じてトップと同じキャラクター画像を表示 -->
-        <div class="character-placeholder">🐰</div>
       </div>
     </header>
 
